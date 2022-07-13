@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 html {
 
 }
@@ -5,12 +6,14 @@ html {
 /* LOGO */
 
 body {
+    font-family: Merriweather;
     margin: 0;
 }
 
-.logo-container p {
+.logo-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -19,31 +22,165 @@ body {
 
 }
 
+.title {
+    /* position: relative; */
+    padding: 10px;
+}
+
+.line {
+    width: 200px;
+    height: 2px;
+    border-radius: 25px;
+    opacity: .25;
+    background-color: rgb(0, 68, 255);
+}
+
 /* NAV BAR */
 
 .navbar {
     display: flex;
     justify-content: center;
+    background-color: white;
+    width: auto;
+    box-shadow: 0px 20px 20px 2px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
 }
 
 .navbar ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80vw;
-    margin: 25;
-    padding: 20px;
+    width: 70vw;
+    margin-bottom: 5px;
+    padding: 10px;
     list-style-type: none;
-    background-color: paleturquoise;
-    box-shadow: 0px 20px 20px 2px rgba(0, 0, 0, 0.1);
-    position: sticky;
 }
 
 .navbar ul a {
     text-decoration: none;
     padding: 5px;
+    transition: 0.3s ease;
 }
 
 .active a {
-    background-color: blanchedalmond;
+    background-color: #66b4f8;
+    text-decoration: underline;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #088178;
+}
+
+/* HERO */
+
+.hero {
+    margin: 5rem;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr ;
+    height: 75vh;
+}
+
+.hero > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.hero > div >img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* PARALLAX */
+
+.parallax{
+    margin-bottom: 50px;
+    height: 175px;
+    background-image: url(images/typewriter.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax > p {
+    font-size: 5rem;
+}
+
+/* GRID */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    height: 50vh;
+}
+
+.grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.grid > img:hover{
+    filter: blur(5px);
+    transform: scale(1.1);
+    zoom: 0.5;
+    opacity: 0.5;
+    transition: 300ms ease-in-out;
+}
+
+.grid{
+    height: 300px;
+    width: 300px;
+    margin: 1rem;
+    background-color: rgb(192, 214, 255);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    height: 50vh;
+    background-color: gray;
+    padding: 2rem;
+}
+
+.footer-flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.col-1{
+    
+}
+
+.col-2{
+
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
 }
