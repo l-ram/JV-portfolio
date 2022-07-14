@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-html {
 
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 /* LOGO */
 
 body {
+    position: relative;
     font-family: Merriweather;
     margin: 0;
+    min-height: 100%;
+    padding-bottom: 15rem;
 }
 
 .logo-container {
@@ -59,28 +64,30 @@ body {
 
 .navbar ul a {
     text-decoration: none;
+    color: black;
     padding: 5px;
     transition: 0.3s ease;
 }
 
 .active a {
-    background-color: #66b4f8;
+    background-color: rgb(0, 68, 255);
+    border-radius: 15px;
     text-decoration: underline;
 }
 
 .navbar li a:hover,
 .navbar li a.active {
-    color: #088178;
+    color: rgb(0, 68, 255);
 }
 
 /* HERO */
 
 .hero {
-    margin: 5rem;
     display: grid;
-    column-gap: 10px;
+    column-gap: 25px;
     grid-template-columns: 1fr 1fr ;
-    height: 75vh;
+    height: 60vh;
+    margin: 5rem;
 }
 
 .hero > div{
@@ -107,14 +114,15 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    filter: grayscale();
 }
 
 .parallax > p {
     font-size: 5rem;
+    filter: hue-rotate();
 }
 
 /* GRID */
@@ -153,16 +161,16 @@ section{
 }
 
 
-
-
-
-
 /* FOOTER */
 
-footer{
-    height: 50vh;
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
     background-color: gray;
-    padding: 2rem;
 }
 
 .footer-flex{
@@ -170,17 +178,28 @@ footer{
     justify-content: space-around;
     flex-wrap: nowrap;
     flex-direction: row;
+    list-style: none;
 }
 
-.col-1{
+
+.col-1 > ul{
+    list-style: none;
+}
+
+.col-2 > ul{
+    list-style: none;
+}
+
+.col-3 > ul{
+    list-style: none;
+    color: black;
+}
+
+.col-3 > ul a{
+    color: black;
+}
+
+.atlas {
     
 }
 
-.col-2{
-
-}
-
-.copyright{
-    display: flex;
-    justify-content: center;
-}
