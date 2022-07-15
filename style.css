@@ -21,10 +21,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.name {
-
+    transform: scale(0.8);
+    margin: -40px;
 }
 
 .title {
@@ -50,6 +48,7 @@ body {
     box-shadow: 0px 20px 20px 2px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .navbar ul {
@@ -70,8 +69,8 @@ body {
 }
 
 .active a {
-    background-color: rgb(0, 68, 255);
-    border-radius: 15px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 10px;
     text-decoration: underline;
 }
 
@@ -85,7 +84,7 @@ body {
 .hero {
     display: grid;
     column-gap: 25px;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: minmax(300px, 50%) 1fr ;
     height: 60vh;
     margin: 5rem;
 }
@@ -106,8 +105,7 @@ body {
 /* PARALLAX */
 
 .parallax{
-    margin-bottom: 50px;
-    height: 175px;
+    height: 150px;
     background-image: url(images/typewriter.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -118,11 +116,13 @@ body {
     justify-content: center;
     align-items: center;
     filter: grayscale();
+    margin-top: 10rem;
+    margin-bottom: 2rem;
 }
 
 .parallax > p {
-    font-size: 5rem;
-    filter: hue-rotate();
+    font-size: 3rem;
+    opacity: 0.7;
 }
 
 /* GRID */
@@ -169,7 +169,7 @@ section{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 15vh;
+
     background-color: gray;
 }
 
@@ -179,6 +179,9 @@ section{
     flex-wrap: nowrap;
     flex-direction: row;
     list-style: none;
+    text-align: center;
+    padding: 10px;
+    padding-right: 40px;
 }
 
 
@@ -200,6 +203,6 @@ section{
 }
 
 .atlas {
-    
+    margin: 15px;
 }
 
