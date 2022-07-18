@@ -1,23 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@font-face {
+    font-family: 'Palatino Font';
+    src: url('Palatino Font.ttf') format('opentype');
+}
 
-html {
-    height: 100%;
-    box-sizing: border-box;
+body {
+    font-family: 'Palatino Font', sans-serif;
+    margin: 0;
 }
 
 .everything_except_footer{
-    margin-bottom: -50px;
+    margin-bottom: -120px;
 }
 
 /* LOGO */
-
-
-
-
-body {
-    font-family: Merriweather;
-    margin: 0;
-}
 
 .logo-container {
     display: flex;
@@ -83,94 +78,39 @@ body {
     color: rgb(0, 68, 255);
 }
 
-/* HERO */
-
-.hero {
-    display: grid;
-    column-gap: 25px;
-    grid-template-columns: minmax(300px, 50%) 1fr ;
-    height: 60vh;
-    margin: 5rem;
-}
-
-.hero > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-}
-
-.hero > div >img{
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* PARALLAX */
-
-.parallax{
-    height: 150px;
-    background-image: url(images/typewriter.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    filter: grayscale();
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-}
-
-.parallax > p {
-    font-size: 3rem;
-    opacity: 0.7;
-}
-
-/* GRID */
-
-section{
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-    flex-wrap: nowrap;
-    height: 50vh;
-}
-
-.grid > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-
-}
-
-.grid > img:hover{
-    filter: blur(5px);
-    transform: scale(1.1);
-    zoom: 0.5;
-    opacity: 0.5;
-    transition: 300ms ease-in-out;
-}
+/* OVER */
 
 .grid{
-    height: 300px;
-    width: 300px;
-    margin: 1rem;
-    background-color: rgb(192, 214, 255);
-    overflow: hidden;
-    border-radius: 10px;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 2rem;
+    margin-inline: auto;
+    width: min(95%, 70rem);
 }
 
+.col-1 > img{
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.copyright{
+    color: gray;
+}
+
+.col-2{
+
+}
 
 /* FOOTER */
 
-.footer{
+.footer,.extra_element{
+    height: 120px;
+}
+
+.footer {
     background-color: gray;
-    height: 50px;
-    margin: 100;
+    width: 100%;
 }
 
 .footer-flex{
